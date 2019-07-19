@@ -104,7 +104,7 @@ module.exports = ({
       }
 
       const initExampleOptions = { cwd: `./${rootFolderName}`, stdio: 'inherit' };
-      return exec('react-native init example', initExampleOptions)
+      return exec('react-native init example --version react-native@0.59.10 --template typescript', initExampleOptions)
         .then(() => {
           // Execute the example template
           const exampleTemplates = require('./templates/example');
